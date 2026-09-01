@@ -25,7 +25,12 @@ async function hkSendFormEmail(formType, data) {
 
   const response = await fetch(HK_EMAIL_ENDPOINT, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    // Content-Type 'text/plain' em vez de 'application/json': assim o pedido
+    // conta como "simple request" para o CORS e o browser não faz um
+    // preflight (OPTIONS) antes — que o trigger HTTP do Logic App não
+    // responde corretamente, bloqueando o envio a partir do site.
+    // O Logic App continua a conseguir ler o corpo como JSON na mesma.
+    headers: { 'Content-Type': 'text/plain' },
     body: JSON.stringify(payload)
   });
 
