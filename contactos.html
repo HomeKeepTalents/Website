@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt">
+	<head>
+		<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+				<title>Contactos · Housekeep Talents</title>
+				<meta name="description" content="Contacte a Housekeep Talents por telefone, email ou formulário.">
+					<link rel="stylesheet" href="assets/css/style.css">
+					</head>
+					<body>
+						<nav class="nav">
+							<div class="nav-inner">
+								<a href="index.html" class="brand">
+									<img src="assets/images/logo.png" style="width: 200px;height: 100px;">
+									</a>
+									<div class="nav-links">
+										<div class="nav-cta-mobile">
+											<a href="candidatos.html" class="btn btn-outline btn-sm nav-btn">Para Candidatos</a>
+											<a href="clientes.html" class="btn btn-gold btn-sm nav-btn">Para Clientes</a>
+										</div>
+									</div>
+									<div class="nav-cta desktop-only">
+										<a href="candidatos.html" class="btn btn-outline btn-sm nav-btn">Para Candidatos</a>
+										<a href="clientes.html" class="btn btn-gold btn-sm nav-btn">Para Clientes →</a>
+									</div>
+									<button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+										<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+											<line x1="3" y1="6" x2="21" y2="6"/>
+											<line x1="3" y1="12" x2="21" y2="12"/>
+											<line x1="3" y1="18" x2="21" y2="18"/>
+										</svg>
+									</button>
+								</div>
+							</nav>
+							<div class="container page-hero reveal">
+								<div class="crumbs">
+									<a href="index.html">Início</a> / Contactos
+								</div>
+								<div class="eyebrow">Fale connosco</div>
+								<h1>Estamos aqui para ajudar</h1>
+								<p class="lede">Tem dúvidas sobre o processo, quer saber mais sobre uma candidatura ou precisa de falar diretamente com a nossa equipa? Contacte-nos.</p>
+							</div>
+							<section class="section-tight container">
+								<div class="contact-grid">
+									<div class="reveal">
+										<div class="contact-info-card">
+											<div class="contact-row">
+												<span class="icn">
+													<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+														<rect x="3" y="5" width="18" height="14" rx="2"/>
+														<path d="M3 7l9 6 9-6"/>
+													</svg>
+												</span>
+												<div>
+													<strong>Email</strong>
+													<span>geral@Housekeeptalents.com</span>
+												</div>
+											</div>
+											<div class="contact-row">
+												<span class="icn">
+													<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+														<path d="M12 21s7-6.5 7-12a7 7 0 0 0-14 0c0 5.5 7 12 7 12z"/>
+														<circle cx="12" cy="9" r="2.4"/>
+													</svg>
+												</span>
+												<div>
+													<strong>Escritório</strong>
+													<span>Estr. de Paço de Arcos 66 66A, 2735-308 Agualva-Cacém</span>
+												</div>
+											</div>
+											<div class="contact-row">
+												<span class="icn">
+													<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6">
+														<circle cx="12" cy="12" r="9"/>
+														<path d="M12 7v5l3 3"/>
+													</svg>
+												</span>
+												<div>
+													<strong>Horário</strong>
+													<span>Segunda a sexta, 9h00 – 18h00</span>
+												</div>
+											</div>
+										</div>
+										<div class="map-frame">
+											<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3110.9699526329564!2d-9.308487723708708!3d38.76439317175267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd1ece3f3270f99b%3A0xe2e3d1ead158e655!2sBelaVista%20Office%20-%20Sintra!5e0!3m2!1spt-PT!2spt!4v1788259011670!5m2!1spt-PT!2spt" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>										
+										 </div>
+									</div>
+									<div class="form-shell reveal">
+										<form id="form-contacto">
+											<div class="field">
+												<label for="k-nome">Nome *</label>
+												<input type="text" id="k-nome" required placeholder="O seu nome">
+												</div>
+												<div class="row-2">
+													<div class="field">
+														<label for="k-email">Email *</label>
+														<input type="email" id="k-email" required placeholder="nome@email.com">
+														</div>
+														<div class="field">
+															<label for="k-tel">Telefone</label>
+															<input type="tel" id="k-tel" placeholder="+351 9xx xxx xxx">
+															</div>
+														</div>
+														<div class="field">
+															<label for="k-assunto">Assunto</label>
+															<select id="k-assunto">
+																<option>Pedido de informação</option>
+																<option>Dúvida sobre candidatura</option>
+																<option>Dúvida sobre pedido de recrutamento</option>
+																<option>Outro</option>
+															</select>
+														</div>
+														<div class="field">
+															<label for="k-msg">Mensagem *</label>
+															<textarea id="k-msg" required placeholder="Escreva a sua mensagem..."></textarea>
+														</div>
+														<button type="submit" class="btn btn-gold btn-block">Enviar Mensagem</button>
+														<div class="form-msg" id="k-feedback"></div>
+													</form>
+												</div>
+											</div>
+										</section>
+										<script>
+document.getElementById('form-contacto').addEventListener('submit', async function(e){
+  e.preventDefault();
+  const form = this;
+  const msg = document.getElementById('k-feedback');
+  const data = {
+    nome: document.getElementById('k-nome').value,
+    email: document.getElementById('k-email').value,
+    telefone: document.getElementById('k-tel').value,
+    assunto: document.getElementById('k-assunto').value,
+    mensagem: document.getElementById('k-msg').value
+  };
+  try {
+    await hkSendFormEmail('contacto', data);
+    msg.className = 'form-msg ok';
+    msg.textContent = 'Mensagem enviada! Responderemos o mais brevemente possível.';
+    form.reset();
+  } catch (err) {
+    msg.className = 'form-msg err';
+    msg.textContent = 'Não foi possível enviar a mensagem. Por favor tente novamente.';
+    console.error(err);
+  }
+});
+</script>
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="brand" style="margin-bottom:14px;">
+		<a href="index.html" class="brand">
+			<img src="assets/images/logo.png" style="width: 200px;height: 100px;">
+		</a>
+        </div>
+        <p style="max-width:32ch;">Recrutamento e seleção de profissionais domésticos de confiança — empregadas, governantas, motoristas, jardineiros e caseiros.</p>
+      </div>
+      <div>
+        <h5>Navegação</h5>
+        <a href="index.html">Início</a>
+        <a href="clientes.html">Para Clientes</a>
+        <a href="candidatos.html">Para Candidatos</a>
+        <a href="contactos.html">Contactos</a>
+      </div>
+      <div>
+        <h5>Empresa</h5>
+        <a href="https://lemon-coast-0a1bb9f10.7.azurestaticapps.net/">Backoffice</a>
+        <a href="contactos.html">Sobre nós</a>
+        <a href="contactos.html">Política de Privacidade</a>
+      </div>
+      <div>
+        <h5>Contacto</h5>
+        <a href="mailto:geral@Housekeeptalents.com">geral@Housekeeptalents.com</a>
+        <a href="#">Estr. de Paço de Arcos 66 66A, 2735-308 Agualva-Cacém</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Housekeep Talents. Todos os direitos reservados.</span>
+      <span>Feito com confiança, discrição e cuidado.</span>
+    </div>
+  </div>
+</footer>
+											<script src="assets/js/main.js"></script>
+										</body>
+									</html>

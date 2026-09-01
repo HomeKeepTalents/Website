@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Para Candidatos · Housekeep Talents</title>
+<meta name="description" content="Candidate-se para trabalhar como empregada doméstica, governanta, motorista, jardineiro ou caseiro.">
+<link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="index.html" class="brand">
+       <img src="assets/images/logo.png" style="width: 200px;height: 100px;">
+    </a>
+    <div class="nav-links">
+       <div class="nav-cta-mobile">
+        <a href="candidatos.html" class="btn btn-outline btn-sm nav-btn">Para Candidatos</a>
+        <a href="clientes.html" class="btn btn-gold btn-sm nav-btn">Para Clientes</a>
+      </div>
+    </div>
+    <div class="nav-cta desktop-only">
+      <a href="candidatos.html" class="btn btn-outline btn-sm nav-btn">Para Candidatos</a>
+      <a href="clientes.html" class="btn btn-gold btn-sm nav-btn">Para Clientes →</a>
+    </div>
+    <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+
+
+<div class="container page-hero reveal">
+  <div class="crumbs"><a href="index.html">Início</a> / Para Candidatos</div>
+  <div class="eyebrow">Ficha de candidatura</div>
+  <h1>Junte-se à nossa base de talentos</h1>
+  <p class="lede">Preencha os seus dados, carregue o CV e uma fotografia. A sua candidatura fica disponível para as famílias e empresas que procuram o seu perfil.</p>
+</div>
+
+<section class="section-tight container">
+  <div class="grid grid_Clients">
+    <div class="form-shell reveal">
+      <form id="form-candidato">
+        <div class="eyebrow">1. Dados pessoais</div>
+        <div class="row-2">
+          <div class="field">
+            <label for="a-nome">Nome completo *</label>
+            <input type="text" id="a-nome" required placeholder="O seu nome completo">
+          </div>
+          <div class="field">
+            <label for="a-nasc">Data de nascimento *</label>
+            <input type="date" id="a-nasc" required>
+          </div>
+        </div>
+        <div class="row-2">
+          <div class="field">
+            <label for="a-email">Email *</label>
+            <input type="email" id="a-email" required placeholder="nome@email.com">
+          </div>
+          <div class="field">
+            <label for="a-tel">Telefone *</label>
+            <input type="tel" id="a-tel" required placeholder="+351 9xx xxx xxx">
+          </div>
+        </div>
+        <div class="field">
+          <label for="a-morada">Localidade / zona onde reside *</label>
+          <input type="text" id="a-morada" required placeholder="Concelho / cidade">
+        </div>
+
+        <div class="eyebrow" style="margin-top:8px;">2. Perfil profissional</div>
+        <div class="field">
+          <label>Função pretendida *</label>
+          <div class="chip-select" id="a-tipo">
+            <label class="chip"><input type="radio" name="tipoA" value="Empregada Doméstica">Empregada Doméstica</label><label class="chip"><input type="radio" name="tipoA" value="Governanta">Governanta</label><label class="chip"><input type="radio" name="tipoA" value="Motorista">Motorista</label><label class="chip"><input type="radio" name="tipoA" value="Jardineiro">Jardineiro</label><label class="chip"><input type="radio" name="tipoA" value="Caseiro(a)">Caseiro(a)</label><label class="chip"><input type="radio" name="tipoA" value="Cozinheira(o)">Cozinheira(o)</label><label class="chip"><input type="radio" name="tipoA" value="Ama / Baby-sitter">Ama / Baby-sitter</label><label class="chip"><input type="radio" name="tipoA" value="Segurança Doméstico">Segurança Doméstico</label><label class="chip"><input type="radio" name="tipoA" value="Outro">Outro</label>
+          </div>
+        </div>
+        <div class="row-2">
+          <div class="field">
+            <label for="a-exp">Anos de experiência</label>
+            <select id="a-exp">
+              <option>Menos de 1 ano</option>
+              <option>1 a 3 anos</option>
+              <option>3 a 5 anos</option>
+              <option>Mais de 5 anos</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="a-disp">Disponibilidade</label>
+            <select id="a-disp">
+              <option>Imediata</option>
+              <option>Até 2 semanas</option>
+              <option>Até 1 mês</option>
+              <option>A combinar</option>
+            </select>
+          </div>
+        </div>
+        <div class="field">
+          <label for="a-sobre">Fale-nos da sua experiência *</label>
+          <textarea id="a-sobre" required placeholder="Ex: 6 anos de experiência como empregada doméstica interna, com referências de duas famílias em Lisboa."></textarea>
+        </div>
+
+        <div class="eyebrow" style="margin-top:8px;">3. Documentos</div>
+        <div class="row-2">
+          <div class="field">
+            <label>Fotografia *</label>
+            <label class="upload-box">
+              <div class="u-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 16V4"/><path d="M7 9l5-5 5 5"/><path d="M4 16v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></svg></div>
+              <div class="u-text">Carregue uma fotografia recente (JPG ou PNG)</div>
+              <div class="u-filename"></div>
+              <input type="file" id="a-foto" accept="image/*" required>
+            </label>
+            <div class="upload-preview"><img alt="Pré-visualização"></div>
+          </div>
+          <div class="field">
+            <label>Curriculum Vitae (CV) *</label>
+            <label class="upload-box">
+              <div class="u-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 16V4"/><path d="M7 9l5-5 5 5"/><path d="M4 16v3a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-3"/></svg></div>
+              <div class="u-text">Carregue o seu CV (PDF ou Word)</div>
+              <div class="u-filename"></div>
+              <input type="file" id="a-cv" accept=".pdf,.doc,.docx" required>
+            </label>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-gold btn-block">Submeter Candidatura</button>
+        <div class="form-msg" id="a-msg"></div>
+      </form>
+    </div>
+
+    <aside class="reveal">
+      <div class="contact-info-card">
+        <h4 style="margin-bottom:14px;">O que valorizamos</h4>
+        <div class="contact-row"><span class="icn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></span><div><strong>Experiência comprovada</strong><span>Referências de anteriores entidades empregadoras.</span></div></div>
+        <div class="contact-row"><span class="icn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></span><div><strong>Pontualidade e discrição</strong><span>Profissionalismo dentro de casas de família.</span></div></div>
+        <div class="contact-row"><span class="icn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg></span><div><strong>Disponibilidade clara</strong><span>Para agilizar o processo de colocação.</span></div></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<script>
+document.getElementById('form-candidato').addEventListener('submit', async function(e){
+  e.preventDefault();
+  const tipoEl = document.querySelector('#a-tipo input[name=tipoA]:checked');
+  const foto = await hkFileToDataURL(document.getElementById('a-foto').files[0]);
+  const cv = await hkFileToDataURL(document.getElementById('a-cv').files[0]);
+  const record = {
+    nome: document.getElementById('a-nome').value,
+    nascimento: document.getElementById('a-nasc').value,
+    email: document.getElementById('a-email').value,
+    telefone: document.getElementById('a-tel').value,
+    localidade: document.getElementById('a-morada').value,
+    funcao: tipoEl ? tipoEl.value : '',
+    experiencia: document.getElementById('a-exp').value,
+    disponibilidade: document.getElementById('a-disp').value,
+    sobre: document.getElementById('a-sobre').value,
+    foto: foto,
+    cv: cv,
+  };
+  const form = this;
+  const msg = document.getElementById('a-msg');
+  try {
+    await hkSendFormEmail('candidato', record);
+    hkSaveRecord('candidatos', record);
+    msg.className = 'form-msg ok';
+    msg.textContent = 'Candidatura submetida com sucesso! Entraremos em contacto assim que surgir uma oportunidade compatível.';
+    form.reset();
+    document.querySelectorAll('#a-tipo .chip').forEach(c => c.classList.remove('checked'));
+    document.querySelectorAll('.upload-preview').forEach(p => p.style.display = 'none');
+    document.querySelectorAll('.u-filename').forEach(f => f.style.display = 'none');
+  } catch (err) {
+    msg.className = 'form-msg err';
+    msg.textContent = 'Não foi possível submeter a candidatura. Por favor tente novamente.';
+    console.error(err);
+  }
+});
+</script>
+
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="brand" style="margin-bottom:14px;">
+		<a href="index.html" class="brand">
+			<img src="assets/images/logo.png" style="width: 200px;height: 100px;">
+		</a>
+        </div>
+        <p style="max-width:32ch;">Recrutamento e seleção de profissionais domésticos de confiança — empregadas, governantas, motoristas, jardineiros e caseiros.</p>
+      </div>
+      <div>
+        <h5>Navegação</h5>
+        <a href="index.html">Início</a>
+        <a href="clientes.html">Para Clientes</a>
+        <a href="candidatos.html">Para Candidatos</a>
+        <a href="contactos.html">Contactos</a>
+      </div>
+      <div>
+        <h5>Empresa</h5>
+        <a href="https://lemon-coast-0a1bb9f10.7.azurestaticapps.net/">Backoffice</a>
+        <a href="contactos.html">Sobre nós</a>
+        <a href="contactos.html">Política de Privacidade</a>
+      </div>
+      <div>
+        <h5>Contacto</h5>
+        <a href="mailto:geral@Housekeeptalents.com">geral@Housekeeptalents.com</a>
+        <a href="#">Estr. de Paço de Arcos 66 66A, 2735-308 Agualva-Cacém</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Housekeep Talents. Todos os direitos reservados.</span>
+      <span>Feito com confiança, discrição e cuidado.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
