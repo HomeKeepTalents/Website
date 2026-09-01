@@ -134,8 +134,45 @@ function hkSaveRecord(kind, record) {
 function hkFileToDataURL(file) {
   return new Promise((resolve, reject) => {
     if (!file) return resolve(null);
+
+    // Ficheiros que não são imagens (ex: PDF/Word do CV) seguem sem alterações
+    if (!file.type.startsWith('image/')) {
+      const reader = new FileReader();
+      reader.onload = () => resolve({ name: file.name, type: file.type, dataUrl: reader.result });
+      reader.onerror = reject;
+      reader.readAsDataURL(file);
+      return;
+    }
+
+    // Imagens (ex: foto de perfil): redimensionar e comprimir antes de
+    // converter para base64, para evitar anexos demasiado grandes.
+    const MAX_DIM = 1000; // largura/altura máxima em pixels
+    const QUALITY = 0.8;  // qualidade JPEG (0 a 1)
+
     const reader = new FileReader();
-    reader.onload = () => resolve({ name: file.name, type: file.type, dataUrl: reader.result });
+    reader.onload = () => {
+      const img = new Image();
+      img.onload = () => {
+        let { width, height } = img;
+        if (width > MAX_DIM || height > MAX_DIM) {
+          if (width > height) {
+            height = Math.round(height * (MAX_DIM / width));
+            width = MAX_DIM;
+          } else {
+            width = Math.round(width * (MAX_DIM / height));
+            height = MAX_DIM;
+          }
+        }
+        const canvas = document.createElement('canvas');
+        canvas.width = width;
+        canvas.height = height;
+        canvas.getContext('2d').drawImage(img, 0, 0, width, height);
+        const compressedDataUrl = canvas.toDataURL('image/jpeg', QUALITY);
+        resolve({ name: file.name, type: 'image/jpeg', dataUrl: compressedDataUrl });
+      };
+      img.onerror = reject;
+      img.src = reader.result;
+    };
     reader.onerror = reject;
     reader.readAsDataURL(file);
   });
