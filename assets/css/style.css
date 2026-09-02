@@ -223,7 +223,7 @@ ul{list-style:none; margin:0; padding:0;}
 	height:100%;
 } }
 .key-art{
-  position:relative; aspect-ratio:1/1; border-radius:var(--radius-lg);
+  position:relative; aspect-ratio:0.9; border-radius:var(--radius-lg);
   background:linear-gradient(155deg, var(--surface), var(--bg-alt));
   border:1px solid var(--line);
   overflow:hidden;
